@@ -28,7 +28,7 @@ export default class extends AbstractView {
             </label>
             <div id="error"></div>
             <input class="login-button" id="login" type="button" value="login">
-            <p class="message">Not registered? <a href="register.html">Create an account</a></p>
+            <p class="message">Not registered? <a href="register">Create an account</a></p>
         </form>
     </div>
 </div>
