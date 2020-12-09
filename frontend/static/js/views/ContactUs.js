@@ -10,7 +10,7 @@ export default class extends AbstractView {
         return `
         <h1>Contact Us!</h1>
         <p>Ori Bibi - 0523456789.</p>
-        <p>Yigal Fishler - 0523546543.</p>
+        <p>Yigal Fischler - 0523546543.</p>
         `;
     }
 }

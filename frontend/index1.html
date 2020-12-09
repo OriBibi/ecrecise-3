@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Ori&Yigal</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="static/css/login.css">
+    <script type="text/javascript" src="js/login.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="login-page">
+        <h1>Ori&Yigal</h1>
+        <h2>Flowers Boutique</h2>
+        <div class="form" id="content">
+            <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                log in
+                </button>
+            <p> about us: ....</p>
+
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Enter user-name and password</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="form">
+                                <form class="login-form">
+                                    <input class="inputs" id="username" type="text" placeholder="username" />
+                                    <input class="inputs" id="password" type="password" placeholder="password" />
+                                    <label for="remember" style="word-wrap:break-word">
+                            <input style="display: inline-block;" type="checkbox" id="remember">remember me
+                        </label>
+                                    <div id="error"></div>
+                                    <div class="modal-footer">
+                                        <input class="login-button" id="login" type="button" value="login">
+                                        <p class="message">Not registered? <a href="register">Create an account</a></p>
+                                    </div>
+                                </form>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
