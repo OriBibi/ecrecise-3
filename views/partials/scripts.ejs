@@ -18,7 +18,7 @@
 		})
 	})
 </script>
-<script>
+<script >
 	$('.nav-link').click(async (e) => {
 		e.preventDefault()
 		e.stopPropagation()
@@ -33,3 +33,50 @@
 		})
 	})
 </script>
+<script >
+	$('.LOGOUT').click(async (e) => {
+		e.preventDefault()
+		e.stopPropagation()
+		
+		await $.ajax({
+			url: '/index',
+			method: 'POST',
+		}).done((data) => {
+			$('#app').html(data)
+			window.history.pushState(data, 'Title', '/index')
+		})
+	})
+</script>
+
+<script >
+	$('.login-form').click(async (e) => {
+		
+		if(username === 'ori'){
+			console.log("here 1")
+			if(password === 'bibi'){
+				console.log("here 2")
+		await $.ajax({
+			url: '/Main',
+			method: 'POST',
+		}).done((data) => {
+			$('#app').html(data)
+			console.log("here 3")
+			window.history.pushState(data, 'Title', '/Main')
+		})
+	}}else
+	{
+		await $.ajax({
+			url: '/index',
+			method: 'POST',
+		}).done((data) => {
+			$('#app').html(data)
+			console.log("here 4")
+			window.history.pushState(data, 'Title', '/index')
+	})
+	}
+	})
+</script>
+
+
+
+
