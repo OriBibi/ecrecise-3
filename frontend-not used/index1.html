@@ -1,13 +1,18 @@
-<div class="my-2" >
-    <%- myCss.style %>
-	<h1 class="title text-center">
-		Ori&Yigal <%= username ? username : "Flowers Boutique" %>!
-	</h1>
-        <div class="form" id="content" border-style= "solid">
-            <a href="#myModal" role="button" class="btn" data-toggle="modal"></a>
+<head>
+    <%=head%>
+</head>
+
+<body>
+    <div class="login-page">
+        <h1>Ori&Yigal</h1>
+        <h2>Flowers Boutique</h2>
+        <div class="form" id="content">
+            <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                 log in
                 </button>
+            <p> about us: ....</p>
+
             <div class="modal" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -21,15 +26,15 @@
                         <!-- Modal body -->
                         <div class="modal-body">
                             <div class="form">
-                                <form class="login-form" >
+                                <form class="login-form">
                                     <input class="inputs" id="username" type="text" placeholder="username" />
                                     <input class="inputs" id="password" type="password" placeholder="password" />
                                     <label for="remember" style="word-wrap:break-word">
                             <input style="display: inline-block;" type="checkbox" id="remember">remember me
                         </label>
                                     <div id="error"></div>
-                                    <div class="modal-footer" >
-                                        <input class="login-button" id="login" type="submit" value="login">
+                                    <div class="modal-footer">
+                                        <input class="login-button" id="login" type="button" value="login">
                                         <p class="message">Not registered? <a href="register">Create an account</a></p>
                                     </div>
                                 </form>
@@ -45,4 +50,8 @@
                     </div>
                 </div>
             </div>
-</div>
+        </div>
+
+</body>
+
+</html>
