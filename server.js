@@ -7,7 +7,7 @@ app.use(express.json())
 
 app.set('view engine', 'ejs')
 var myCss = {
-	style : fs.readFileSync('views/css/style.ejs','utf8')
+    style: fs.readFileSync('views/css/style.ejs', 'utf8')
 };
 app.get('/', (req, res) => res.render('base', { isAuthenticated: false }))
 
@@ -48,8 +48,8 @@ console.log("not login")
 	
 })
 app.post('/about', (req, res) => {
-	// console.log('req', req)
-	res.render('pages/about',{ myCss: myCss })
+    // console.log('req', req)
+    res.render('pages/about', { myCss: myCss })
 })
 app.post('/ContactUs', (req, res) => {
 	res.render('pages/ContactUs',{ myCss: myCss })
