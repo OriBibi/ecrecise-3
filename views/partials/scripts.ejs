@@ -8,31 +8,7 @@
 	integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
 	crossorigin="anonymous"
 ></script>
-<script>
-	$(document).ready(async () => {
-		await $.ajax({
-			url: '/index',
-			method: 'POST'
-		}).done((data) => {
-			$('#app').html(data)
-		})
-	})
-</script>
-<script >
-	$('.nav-link').click(async (e) => {
-		e.preventDefault()
-		e.stopPropagation()
-		let url = '/' + e.target.id.split('-')[1]
-		await $.ajax({
-			// url = '/' + nav-index
-			url: url,
-			method: 'POST'
-		}).done((data) => {
-			$('#app').html(data)
-			window.history.pushState(data, 'Title', url)
-		})
-	})
-</script>
+
 <script >
 	$('.LOGOUT').click(async (e) => {
 		e.preventDefault()
@@ -48,35 +24,44 @@
 	})
 </script>
 
-<script >
-	$('.login-form').click(async (e) => {
-		
+
+
+<script>
+	$('.nav-link').click(async (e) => {
+		e.preventDefault()
+		e.stopPropagation()
+		let url = '/' + e.target.id.split('-')[1]
+		let username = document.getElementById('username')
+		let password = document.getElementById('password')
+if(username!=null && password!=null){
 		if(username === 'ori'){
-			console.log("here 1")
+			console.log("here 1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 			if(password === 'bibi'){
-				console.log("here 2")
+				console.log("here 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+				let url = '/' + e.target.id.split('-')[1]
+
+				await $.ajax({
+					url: '/Main',
+					method: 'GET',
+				}).done((data) => {
+					$('#app').html(data)
+					console.log("here 3")
+					window.history.pushState(data, 'Title', '/Main')
+				})
+	}}}
+	else{
+		console.log("i am here 3!")
 		await $.ajax({
-			url: '/Main',
-			method: 'POST',
+			// url = '/' + nav-index
+			url: url,
+			method: 'POST'
 		}).done((data) => {
 			$('#app').html(data)
-			console.log("here 3")
-			window.history.pushState(data, 'Title', '/Main')
+			window.history.pushState(data, 'Title', url)
 		})
-	}}else
-	{
-		await $.ajax({
-			url: '/index',
-			method: 'POST',
-		}).done((data) => {
-			$('#app').html(data)
-			console.log("here 4")
-			window.history.pushState(data, 'Title', '/index')
-	})
 	}
 	})
 </script>
-
 
 
 
